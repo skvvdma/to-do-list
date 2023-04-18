@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Блок добавления задачи (поле и кнопка) */
+.add-block {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
+    flex-basis: 450px;
+}
+
+/* Поле ввода */
+#taskInput {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    flex: 1 1 450px;
+}
+
+/* Плейсхолдер */
+#taskInput::placeholder {
+    color: rgba(128, 128, 128, 0.384);
+}
+
+/* Кнопка добавления задачи */
+#addBtn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+/* Список задач */
+
+#list {
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+/* Элемент списка */
+
+.item {
+    border: 1px solid rgb(233, 208, 208);
+    text-transform: uppercase;
+    display: flex;
+    height: 60px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
+    background-color: white;
+    -webkit-border-radius: 1px solid red;
+    -moz-border-radius: 1px solid red;
+    -ms-border-radius: 1px solid red;
+    -o-border-radius: 1px solid red;
+}
+
+/* Запретить ужиматься блоку с кнопками в элементе списка*/
+.item__btns {
+    flex-shrink: 0;
+}
+
+
+/* Символ корзины */
+.fa-trash-can {
+    background-color: transparent;
+    font-size: 17px;
+    color: red;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* Символ чекбокса */
+.fa-square-check {
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: green;
+    margin-right: 20px;
+}
+
+/* Поведение элемента списка если добавлен класс .done */
+.item.done {
+    text-decoration: line-through;
+    border: 1px solid green;
+}
